@@ -6,4 +6,6 @@ sudo apt update && sudo apt install -y \
 	htop \
 	vim \
 	tmux \
-	stow;
+	stow \
+	git \
+	zsh;
