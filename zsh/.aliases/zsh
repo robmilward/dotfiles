@@ -1,0 +1,2 @@
+alias zshsource="source ~/.zshrc"
+alias zshrc="$EDITOR ~/.zshrc; zshsource"
