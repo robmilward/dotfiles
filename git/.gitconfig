@@ -1,0 +1,6 @@
+[user]
+	email = rob.milward@gmail.com
+	name = Rob Milward
+[core]
+	editor = vim
+	excludesfile = /home/rob/.gitignoreglobal
