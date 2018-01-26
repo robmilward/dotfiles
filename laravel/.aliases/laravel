@@ -7,15 +7,36 @@ function larastart {
 		return;
 	fi 
 
-	alias up="cd $PWD/laradock;docker-compose up -d nginx mysql redis;cd $PWD";
-	alias down="cd $PWD/laradock;docker-compose down;cd $PWD"
-	alias workspace="cd $PWD/laradock;docker-compose exec --user=laradock workspace bash;cd $PWD"
-	alias art="cd $PWD/laradock;docker-compose exec --user=laradock workspace php artisan; cd $PWD"
+	DIR=$(pwd);
+
+	function up {
+		cd $DIR/laradock;
+		docker-compose up -d nginx mysql redis mailhog;
+		cd $DIR;
+	}
+
+	function down {
+		cd $DIR/laradock;
+                docker-compose down;
+                cd $DIR;
+	}
+
+	function workspace {
+		cd $DIR/laradock;
+		docker-compose exec --user=laradock workspace bash;
+		cd $DIR;
+	}
+
+	function art {
+		cd $DIR/laradock;
+		docker-compose exec --user=laradock workspace php artisan $@;
+		cd $DIR;
+	}
 }
 
 function larastop {
-	unalias up 2>/dev/null
-	unalias down 2>/dev/null
-	unalias workspace 2>/dev/null
-	unalias art 2>/dev/null
+	unset -f up 2>/dev/null
+	unset -f down 2>/dev/null
+	unset -f workspace 2>/dev/null
+	unset -f art 2>/dev/null
 }
