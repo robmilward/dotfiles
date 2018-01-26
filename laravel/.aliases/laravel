@@ -1,0 +1,21 @@
+
+function larastart {
+	larastop;	
+
+	if [ ! -d "$PWD/laradock" ]; then
+		echo "A 'laradock' folder was not found in '$PWD'";
+		return;
+	fi 
+
+	alias up="cd $PWD/laradock;docker-compose up -d nginx mysql redis;cd $PWD";
+	alias down="cd $PWD/laradock;docker-compose down;cd $PWD"
+	alias workspace="cd $PWD/laradock;docker-compose exec --user=laradock workspace bash;cd $PWD"
+	alias art="cd $PWD/laradock;docker-compose exec --user=laradock workspace php artisan; cd $PWD"
+}
+
+function larastop {
+	unalias up 2>/dev/null
+	unalias down 2>/dev/null
+	unalias workspace 2>/dev/null
+	unalias art 2>/dev/null
+}
