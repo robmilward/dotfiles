@@ -22,4 +22,5 @@ fi
 for f in ~/.aliases/*; do source $f; done
 
 # path configuration
+PATH=~/.local/bin:$PATH
 for f in ~/.paths/*; do source $f; done
