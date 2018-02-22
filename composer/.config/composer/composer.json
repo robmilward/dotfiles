@@ -1,5 +1,5 @@
 {
     "require": {
-        "laravel/installer": "^1.5"
+        "laravel/installer": "^2.0"
     }
 }

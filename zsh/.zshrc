@@ -7,6 +7,7 @@ HIST_STAMPS="yyy-mm-dd"
 
 plugins=(
   git
+  aws
 )
 
 source $ZSH/oh-my-zsh.sh
