@@ -8,16 +8,17 @@ function larastart {
 	fi 
 
 	DIR=$(pwd);
+	COMPOSE_PROJECT_NAME=$(basename $(pwd))
 
 	function up {
 		cd $DIR/laradock;
-		docker-compose up -d nginx mysql redis mailhog workspace;
+		docker-compose -p $COMPOSE_PROJECT_NAME up -d nginx mysql redis mailhog workspace;
 		cd $DIR;
 	}
 
 	function down {
 		cd $DIR/laradock;
-                docker-compose down;
+                docker-compose -p $COMPOSE_PROJECT_NAME down;
                 cd $DIR;
 	}
 
