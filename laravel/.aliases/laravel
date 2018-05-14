@@ -11,7 +11,7 @@ function larastart {
 
 	function up {
 		cd $DIR/laradock;
-		docker-compose up -d nginx mysql redis mailhog;
+		docker-compose up -d nginx mysql redis mailhog workspace;
 		cd $DIR;
 	}
 
