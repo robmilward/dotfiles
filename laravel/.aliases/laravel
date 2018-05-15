@@ -24,13 +24,13 @@ function larastart {
 
 	function workspace {
 		cd $DIR/laradock;
-		docker-compose exec --user=laradock workspace bash;
+		docker-compose -p $COMPOSE_PROJECT_NAME exec --user=laradock workspace bash;
 		cd $DIR;
 	}
 
 	function art {
 		cd $DIR/laradock;
-		docker-compose exec --user=laradock workspace php artisan $@;
+		docker-compose -p $COMPOSE_PROJECT_NAME exec --user=laradock workspace php artisan $@;
 		cd $DIR;
 	}
 }
