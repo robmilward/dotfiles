@@ -8,6 +8,8 @@ HIST_STAMPS="yyy-mm-dd"
 plugins=(
   git
   aws
+  z
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -25,3 +27,5 @@ for f in ~/.aliases/*; do source $f; done
 # path configuration
 PATH=~/.local/bin:$PATH
 for f in ~/.paths/*; do source $f; done
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white,bg=blue"
