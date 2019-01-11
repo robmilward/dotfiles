@@ -1,0 +1,3 @@
+alias pubkey="cat ~/.ssh/id_rsa.pub"
+alias copy="xclip -sel clipboard"
+
