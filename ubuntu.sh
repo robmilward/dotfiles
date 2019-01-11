@@ -8,4 +8,5 @@ sudo apt update && sudo apt install -y \
 	tmux \
 	stow \
 	git \
-	zsh;
+	zsh \
+	xclip;
