@@ -41,3 +41,12 @@ function larastop {
 	unset -f workspace 2>/dev/null
 	unset -f art 2>/dev/null
 }
+
+function homestead() {
+   ( cd ~/Homestead && vagrant $* )
+}
+
+function homestead-tunnel() {
+   (sudo ssh -L 0.0.0.0:80:192.168.10.10:80 vagrant@192.168.10.10)
+}
+
