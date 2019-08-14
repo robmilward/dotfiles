@@ -10,4 +10,6 @@ sudo apt update && sudo apt install -y \
 	git \
 	zsh \
 	xclip \
-	wmctrl;
+	wmctrl \
+	xdotool \
+	gnome-tweaks;
