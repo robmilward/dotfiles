@@ -8,8 +8,6 @@ HIST_STAMPS="yyy-mm-dd"
 plugins=(
   git
   aws
-  z
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
