@@ -9,4 +9,5 @@ sudo apt update && sudo apt install -y \
 	stow \
 	git \
 	zsh \
-	xclip;
+	xclip \
+	wmctrl;
